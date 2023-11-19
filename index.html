@@ -160,5 +160,30 @@
 </div>
 </div>
 </div>
+<script type="text/javascript">
+var tx=new Array("欢迎访问","持续更新","等你探索","谢谢访问");
+var txcount=4;
+var i=1;
+var wo=0;
+var ud=1;
+function animatetitle()
+{
+window.document.title=tx[wo].substr(0,i)+"";
+if(ud==0)i--;
+if(ud==1)i++;
+if(i==-1){ud=1;i=0;wo++;wo=wo%txcount;}
+if(i==tx[wo].length+10){ud=0;i=tx[wo].length;}
+parent.window.document.title=tx[wo].substr(0,i)+"";
+setTimeout("animatetitle()",100);
+}
+animatetitle();
+</script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js">
+  </script>
+  <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1">
+  </div>
+  </div>
+  <script type="text/javascript">
+</script>
 </body>
 </html>
